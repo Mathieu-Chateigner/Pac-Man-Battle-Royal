@@ -48,13 +48,12 @@ namespace Networking
 
         private void LoadArena()
         {
-            Debug.Log("LoadArena");
-            
             if (!PhotonNetwork.IsMasterClient) return;
-            
-            Debug.Log("LoadArena2");
-            
-            PhotonNetwork.LoadLevel("Game");
+
+            if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
+            {
+                PhotonNetwork.LoadLevel("Game");
+            }
         }
 
         #endregion
