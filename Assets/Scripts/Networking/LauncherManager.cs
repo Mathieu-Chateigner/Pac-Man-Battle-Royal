@@ -16,6 +16,7 @@ namespace Networking
         #region Private Fields
         
         private string _gameVersion;
+        private bool _isConnecting;
 
         #endregion
 
@@ -37,7 +38,10 @@ namespace Networking
 
         public override void OnConnectedToMaster()
         {
+            if (!_isConnecting) return;
+            
             PhotonNetwork.JoinRandomRoom();
+            _isConnecting = false;
         }
 
         public override void OnDisconnected(DisconnectCause cause)
@@ -52,7 +56,9 @@ namespace Networking
 
         public override void OnJoinedRoom()
         {
-            Debug.Log("Player joined.");
+            if (PhotonNetwork.CurrentRoom.PlayerCount != 1) return;
+            
+            PhotonNetwork.LoadLevel("Lobby");
         }
 
         #endregion
@@ -67,7 +73,7 @@ namespace Networking
             }
             else
             {
-                PhotonNetwork.ConnectUsingSettings();
+                _isConnecting = PhotonNetwork.ConnectUsingSettings();
                 PhotonNetwork.GameVersion = _gameVersion;
             }
         }
