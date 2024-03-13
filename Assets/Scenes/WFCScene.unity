@@ -123,6 +123,61 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1556094734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556094736}
+  - component: {fileID: 1556094735}
+  m_Layer: 0
+  m_Name: mapgeneratorV2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1556094735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556094734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f1d7362d1cc00044ae7f2f3da84a38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 40
+  height: 40
+  Nodes:
+  - {fileID: 11400000, guid: 3e8f720bcf820914f84c8c3b27a57a52, type: 2}
+  - {fileID: 11400000, guid: 8fa0a98fbfa1be340a503d2d4f033332, type: 2}
+  - {fileID: 11400000, guid: fdb85081eeb478a45b457ac8df0fa979, type: 2}
+  - {fileID: 11400000, guid: bf8bf4b8dab060d4fb14bf88f6bb3550, type: 2}
+  - {fileID: 11400000, guid: 3902af1991f429141852d250181847b1, type: 2}
+  - {fileID: 11400000, guid: 639491adf77b52e40bd28ed3bab7610e, type: 2}
+  - {fileID: 11400000, guid: 365c1e4663251e342abf5235eb44f985, type: 2}
+  - {fileID: 11400000, guid: 4b3ec7203143af945bcb7cee4887d6f3, type: 2}
+--- !u!4 &1556094736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556094734}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7127051, y: 8.917746, z: -0.10593892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723297433
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1827416085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77a1038dc300c1449a34a9ac20a2900, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dimensions: 10
+  dimensions: 20
   tileObjects:
   - {fileID: 2906231089600741538, guid: 22556f19f9e40c24087be6ebff5fb9a0, type: 3}
   - {fileID: 5353069005329012427, guid: 85cb079fdc8b7ce43ad0e675a81cafc1, type: 3}
@@ -277,3 +332,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1723297436}
   - {fileID: 1827416086}
+  - {fileID: 1556094736}

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveFunction : MonoBehaviour
 {
@@ -61,19 +62,21 @@ public class WaveFunction : MonoBehaviour
             tempGrid.RemoveRange(stopIndex, tempGrid.Count - stopIndex);
         }
 
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.02f);
 
         CollapseCell(tempGrid);
     }
 
     void CollapseCell(List<Cell> tempGrid)
     {
-        int randIndex = UnityEngine.Random.Range(0, tempGrid.Count);
+        int randIndex = Random.Range(0, tempGrid.Count);
 
         Cell cellToCollapse = tempGrid[randIndex];
 
         cellToCollapse.collapsed = true;
-        Tile selectedTile = cellToCollapse.tileOptions[UnityEngine.Random.Range(0, cellToCollapse.tileOptions.Length)];
+        int rnd = Random.Range(0, cellToCollapse.tileOptions.Length);
+        Debug.Log(rnd);
+        Tile selectedTile = cellToCollapse.tileOptions[rnd];
         cellToCollapse.tileOptions = new Tile[] { selectedTile };
 
         Tile foundTile = cellToCollapse.tileOptions[0];
