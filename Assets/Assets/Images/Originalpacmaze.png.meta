@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 2
@@ -108,7 +108,637 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Originalpacmaze_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 212
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 52f6b6d1d39b49344ac7feb3bfc1432e
+      internalID: -2025300077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 212
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: b6c18c89503c4d34aadfcf9beb682495
+      internalID: 682246678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 224
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: db08f642162f38c4f8bc97203310c255
+      internalID: -970948328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 212
+        width: 8
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: ace80b1788363d2449d23765784aa8a5
+      internalID: 48842585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 212
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: c97a058c11f11a8438bdd5683e88434a
+      internalID: 761761521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_5
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 212
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 688ad69f8140ff346a080860a4d87e41
+      internalID: -1206199982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_6
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 188
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 79022092f6c2a314584f5ff2596de8df
+      internalID: 2067229224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_7
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 188
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5082834aae2eb384cbee557b04560e58
+      internalID: 1268914999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 188
+        width: 56
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 35fe8d7c95f7afc498dd9d59b0995d7a
+      internalID: -358928488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_9
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 164
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 78f288318dd1c4b43b1f9a694c443858
+      internalID: -1181088192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 4
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 05e99e490d198d4488b4737662c56882
+      internalID: 404325006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_11
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 168
+        width: 40
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c77f7d7e921e6eb419c589df93d5d21b
+      internalID: 2020776265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_12
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 144
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76770ed132cfd784496b80b49d5a072a
+      internalID: 1249743589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 44
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b280726520ad7de43bf59c6574b78123
+      internalID: -436932107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_14
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 140
+        width: 8
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: e697389d7a9ecbb4eabf6b27aa8997ba
+      internalID: 1083785757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_15
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 164
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1efbb22df783c494788de2ec8b877f7d
+      internalID: -1759799247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_16
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 140
+        width: 8
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: aa2093d980f34d74ea576f0f5a7caa21
+      internalID: 764177721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 164
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: a7c8c451fcdf33e479e4ac5be50eb196
+      internalID: 1193134376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_18
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 168
+        width: 4
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9083620255b8dc84f81836de53f33c3a
+      internalID: 926707030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 168
+        width: 40
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a1f8c7e8cfa3f45bf718bf0a13a2ba
+      internalID: -774359458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_20
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 140
+        width: 44
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc19f0f7a13bb7409dec76af770b93a
+      internalID: 1258141324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_21
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 144
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9a252ddb9fcee4ebf5b53c4ab92d02
+      internalID: -594604918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_22
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 120
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 219842db5fe45a24995e4255b6593570
+      internalID: -2104076183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_23
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 144
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: dd3f48d1d8f26db479381ca2331e9b06
+      internalID: -1438497500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_24
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 116
+        width: 56
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 19931d3b5f530bd47af04538ea671ca6
+      internalID: -188642611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 144
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: fc814a8ef96cfc842ba237faf4a537da
+      internalID: -883417719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_26
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 120
+        width: 4
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 1
+      bones: []
+      spriteID: 1747474ab3be1d04796d0ab1181c42da
+      internalID: 992451076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_27
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 92
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4753efc14c58f4996991833056f5bb
+      internalID: -764384505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_28
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 92
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9c285b6923a1649939aa52ba8eaf8f
+      internalID: -1609598710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Originalpacmaze_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 224
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957ec6b3a0f859a4c9d8bb06ea82e957
+      internalID: 1871689085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +749,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Originalpacmaze_0: -2025300077
+      Originalpacmaze_1: 682246678
+      Originalpacmaze_10: 404325006
+      Originalpacmaze_11: 2020776265
+      Originalpacmaze_12: 1249743589
+      Originalpacmaze_13: -436932107
+      Originalpacmaze_14: 1083785757
+      Originalpacmaze_15: -1759799247
+      Originalpacmaze_16: 764177721
+      Originalpacmaze_17: 1193134376
+      Originalpacmaze_18: 926707030
+      Originalpacmaze_19: -774359458
+      Originalpacmaze_2: -970948328
+      Originalpacmaze_20: 1258141324
+      Originalpacmaze_21: -594604918
+      Originalpacmaze_22: -2104076183
+      Originalpacmaze_23: -1438497500
+      Originalpacmaze_24: -188642611
+      Originalpacmaze_25: -883417719
+      Originalpacmaze_26: 992451076
+      Originalpacmaze_27: -764384505
+      Originalpacmaze_28: -1609598710
+      Originalpacmaze_29: 1871689085
+      Originalpacmaze_3: 48842585
+      Originalpacmaze_4: 761761521
+      Originalpacmaze_5: -1206199982
+      Originalpacmaze_6: 2067229224
+      Originalpacmaze_7: 1268914999
+      Originalpacmaze_8: -358928488
+      Originalpacmaze_9: -1181088192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
