@@ -7,7 +7,6 @@ namespace Networking
 {
     public class NetworkManager : MonoBehaviourPunCallbacks
     {
-
         #region Photon Callbacks
         
         public override void OnLeftRoom()
@@ -32,7 +31,6 @@ namespace Networking
 
             LoadArena();
         }
-        
 
         #endregion
 
@@ -53,7 +51,8 @@ namespace Networking
 
             if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
             {
-                PhotonNetwork.LoadLevel("WFCScene");
+                Debug.Log($"CurrentRoom.PlayerCount : {PhotonNetwork.CurrentRoom.PlayerCount} - CurrentRoom.MaxPlayers : {PhotonNetwork.CurrentRoom.MaxPlayers}");
+                PhotonNetwork.LoadLevel("Game");
             }
         }
 
