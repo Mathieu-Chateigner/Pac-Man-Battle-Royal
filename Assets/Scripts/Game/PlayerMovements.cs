@@ -1,5 +1,5 @@
+using System.Collections;
 using UnityEngine;
-using Vector2 = UnityEngine.Vector2;
 
 namespace Game
 {
@@ -16,79 +16,79 @@ namespace Game
     {
         public Rigidbody2D rb;
         public LayerMask whatStopsMovement;
-        public float moveDelay = 0.05f; // Time in seconds between moves
+        public float moveDelay = 0.05f;
+        public float moveSpeed = 5f;
 
         private Directions _currentDir = Directions.NoDir;
-        private float _lastMoveTime; // When the last move happened
+        private float _lastMoveTime;
+        private bool _isMoving;
 
         private void Update()
         {
-            if (Time.time - _lastMoveTime < moveDelay) return;
+            if (Time.time - _lastMoveTime < moveDelay || _isMoving) return;
 
             if (Input.GetKey(KeyCode.UpArrow))
                 if (!Physics2D.OverlapCircle(rb.position + Vector2.up, .2f, whatStopsMovement))
                     _currentDir = Directions.Up;
-
             if (Input.GetKey(KeyCode.DownArrow))
                 if (!Physics2D.OverlapCircle(rb.position + Vector2.down, .2f, whatStopsMovement))
                     _currentDir = Directions.Down;
-
             if (Input.GetKey(KeyCode.LeftArrow))
                 if (!Physics2D.OverlapCircle(rb.position + Vector2.left, .2f, whatStopsMovement))
                     _currentDir = Directions.Left;
-
             if (Input.GetKey(KeyCode.RightArrow))
                 if (!Physics2D.OverlapCircle(rb.position + Vector2.right, .2f, whatStopsMovement))
                     _currentDir = Directions.Right;
 
-            Move(_currentDir);
+            if (_currentDir == Directions.NoDir) return;
+
+            var directionVector = DirectionToVector(_currentDir);
+            if (!Physics2D.OverlapCircle(rb.position + directionVector, .2f, whatStopsMovement))
+            {
+                StartCoroutine(MoveToPosition(rb.position + directionVector));
+            }
         }
 
-        private void Move(Directions direction = default)
+        private IEnumerator MoveToPosition(Vector2 targetPosition)
         {
-            var position = rb.position;
+            _lastMoveTime = Time.time;
+            _isMoving = true;
 
-            switch (direction)
+            while (rb.position != targetPosition)
             {
-                case Directions.Down:
-                    if (!Physics2D.OverlapCircle(rb.position + Vector2.down, .2f, whatStopsMovement))
-                    {
-                        rb.rotation = -90;
-                        rb.position = new Vector2(position.x, position.y - 1);
-                    }
-
-                    break;
-                case Directions.Up:
-                    if (!Physics2D.OverlapCircle(rb.position + Vector2.up, .2f, whatStopsMovement))
-                    {
-                        rb.rotation = 90;
-                        rb.position = new Vector2(position.x, position.y + 1);
-                    }
-
-                    break;
-                case Directions.Left:
-                    if (!Physics2D.OverlapCircle(rb.position + Vector2.left, .2f, whatStopsMovement))
-                    {
-                        rb.rotation = 180;
-                        rb.position = new Vector2(position.x - 1, position.y);
-                    }
-
-                    break;
-                case Directions.Right:
-                    if (!Physics2D.OverlapCircle(rb.position + Vector2.right, .2f, whatStopsMovement))
-                    {
-                        rb.rotation = 0;
-                        rb.position = new Vector2(position.x + 1, position.y);
-                    }
-
-                    break;
-                case Directions.NoDir:
-                    return;
-                default:
-                    return;
+                rb.position = Vector2.MoveTowards(rb.position, targetPosition, moveSpeed * Time.deltaTime);
+                yield return null;
             }
 
-            _lastMoveTime = Time.time; // Update the time of the last move
+            _isMoving = false;
+        }
+
+        private Vector2 DirectionToVector(Directions dir)
+        {
+            switch (dir)
+            {
+                case Directions.Up:
+                    rb.rotation = 90;
+                    return Vector2.up;
+                case Directions.Down:
+                    rb.rotation = -90;
+                    return Vector2.down;
+                case Directions.Left: 
+                    rb.rotation = 180;
+                    return Vector2.left;
+                case Directions.Right: 
+                    rb.rotation = 0;
+                    return Vector2.right;
+                case Directions.NoDir: 
+                    return Vector2.zero;
+                default:
+                    return Vector2.zero;
+            }
+        }
+
+        public void StopMovement()
+        {
+            _currentDir = Directions.NoDir;
         }
     }
 }

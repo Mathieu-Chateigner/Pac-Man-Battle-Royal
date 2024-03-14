@@ -1,6 +1,6 @@
+using Networking;
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game
 {
@@ -8,6 +8,16 @@ namespace Game
     {
         [Tooltip("The current Health of our player")]
         public float health = 10f;
+
+        private void Update()
+        {
+            if (!photonView.IsMine) return;
+            
+            if (health <= 0f)
+            {
+                //GameManager.Instance.LeaveRoom();
+            }
+        }
 
         private void OnTriggerEnter(Collider other)
         {

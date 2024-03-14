@@ -11,6 +11,12 @@ namespace Networking
         [SerializeField]
         private int maxPlayersPerRoom = 4;
 
+        [SerializeField]
+        private GameObject gamePanel;
+        
+        [SerializeField]
+        private GameObject loadingPanel;
+
         #endregion
 
         #region Private Fields
