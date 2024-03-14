@@ -1,10 +1,5 @@
-using System;
-using System.Numerics;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using Vector2 = UnityEngine.Vector2;
-using Vector3 = UnityEngine.Vector3;
 
 namespace Game
 {
@@ -16,96 +11,84 @@ namespace Game
         Right,
         NoDir
     }
-    
+
     public class PlayerMovements : MonoBehaviour
     {
-        public float speed = 0.5f;
-        public Transform movePoint;
+        public Rigidbody2D rb;
         public LayerMask whatStopsMovement;
-        
-        private Directions _currentDir = Directions.NoDir;
+        public float moveDelay = 0.05f; // Time in seconds between moves
 
-        private void Start()
-        {
-            movePoint.parent = null;
-        }
+        private Directions _currentDir = Directions.NoDir;
+        private float _lastMoveTime; // When the last move happened
 
         private void Update()
         {
-            transform.position = Vector3.MoveTowards(transform.position, movePoint.position, speed * Time.deltaTime);
+            if (Time.time - _lastMoveTime < moveDelay) return;
 
-            if (!(Vector3.Distance(transform.position, movePoint.position) <= 0.005f)) return;
-            if (Math.Abs(Mathf.Abs(Input.GetAxisRaw("Horizontal")) - 1f) < 0.001)
-            {
-                if (!Physics2D.OverlapCircle(
-                        movePoint.position + new Vector3(0.01f, 0f, 0f), .2f,
-                        whatStopsMovement))
-                {
-                    movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal")/100, 0f, 0f);
-                }
-            } else if (Math.Abs(Mathf.Abs(Input.GetAxisRaw("Vertical")) - 1f) < 0.001)
-            {
-                if (!Physics2D.OverlapCircle(
-                        movePoint.position + new Vector3(0f, 0.01f, 0f), .002f,
-                        whatStopsMovement))
-                {
-                    movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical")/100, 0f);
-                }
-            }
+            if (Input.GetKey(KeyCode.UpArrow))
+                if (!Physics2D.OverlapCircle(rb.position + Vector2.up, .2f, whatStopsMovement))
+                    _currentDir = Directions.Up;
 
-            /*
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                _currentDir = Directions.Up;
-            }
-            
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                _currentDir = Directions.Down;
-            }
-            
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                _currentDir = Directions.Left;
-            }
-            
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                _currentDir = Directions.Right;
-            }
-            
+            if (Input.GetKey(KeyCode.DownArrow))
+                if (!Physics2D.OverlapCircle(rb.position + Vector2.down, .2f, whatStopsMovement))
+                    _currentDir = Directions.Down;
+
+            if (Input.GetKey(KeyCode.LeftArrow))
+                if (!Physics2D.OverlapCircle(rb.position + Vector2.left, .2f, whatStopsMovement))
+                    _currentDir = Directions.Left;
+
+            if (Input.GetKey(KeyCode.RightArrow))
+                if (!Physics2D.OverlapCircle(rb.position + Vector2.right, .2f, whatStopsMovement))
+                    _currentDir = Directions.Right;
+
             Move(_currentDir);
-            */
         }
-        
-        /*
+
         private void Move(Directions direction = default)
         {
+            var position = rb.position;
+
             switch (direction)
             {
                 case Directions.Down:
-                    rb.velocity = new Vector2(0, -1 * speed);
-                    rb.rotation = -90;
+                    if (!Physics2D.OverlapCircle(rb.position + Vector2.down, .2f, whatStopsMovement))
+                    {
+                        rb.rotation = -90;
+                        rb.position = new Vector2(position.x, position.y - 1);
+                    }
+
                     break;
                 case Directions.Up:
-                    rb.velocity = new Vector2(0, 1 * speed);
-                    rb.rotation = 90;
+                    if (!Physics2D.OverlapCircle(rb.position + Vector2.up, .2f, whatStopsMovement))
+                    {
+                        rb.rotation = 90;
+                        rb.position = new Vector2(position.x, position.y + 1);
+                    }
+
                     break;
                 case Directions.Left:
-                    rb.velocity = new Vector2(-1 * speed, 0);
-                    rb.rotation = 180;
+                    if (!Physics2D.OverlapCircle(rb.position + Vector2.left, .2f, whatStopsMovement))
+                    {
+                        rb.rotation = 180;
+                        rb.position = new Vector2(position.x - 1, position.y);
+                    }
+
                     break;
                 case Directions.Right:
-                    rb.velocity = new Vector2(1 * speed, 0);
-                    rb.rotation = 0;
+                    if (!Physics2D.OverlapCircle(rb.position + Vector2.right, .2f, whatStopsMovement))
+                    {
+                        rb.rotation = 0;
+                        rb.position = new Vector2(position.x + 1, position.y);
+                    }
+
                     break;
                 case Directions.NoDir:
-                    break;
+                    return;
                 default:
-                    Debug.Log("Default ?");
-                    break;
+                    return;
             }
+
+            _lastMoveTime = Time.time; // Update the time of the last move
         }
-        */
     }
 }
