@@ -23,6 +23,13 @@ public class WFCBuilder : MonoBehaviour
        new Vector2Int(-1, 0),//left
    };
 
+   private GameManager gm;
+
+   private void Awake()
+   {
+       gm = GameManager.Instance;
+   }
+
    private void Start()
    {
        _grid = new WFCNode[width, height];
@@ -87,10 +94,18 @@ public class WFCBuilder : MonoBehaviour
                _grid[x, y] = potentialNodes[Random.Range(0, potentialNodes.Count)];
            }
            GameObject newNode = Instantiate(_grid[x, y].prefab, new Vector2(x, y), Quaternion.identity);
+           AddSpawnPoint(newNode.transform);
            _toCollapse.RemoveAt(0);
        }
    }
 
+   private void AddSpawnPoint(Transform transform)
+   {
+       if (transform.childCount == 1)
+       {
+           gm.listSpawnPoint.Add(transform.GetChild(0));
+       }
+   }
    private void WhittleNodes(List<WFCNode> potentialNodes, List<WFCNode> validNodes)
    {
        for (int i = potentialNodes.Count - 1; i > -1; i--)
