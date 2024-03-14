@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0853598425eec44b67959dac297c33, type: 3}
+  m_Name: verticalRightRed
+  m_EditorClassIdentifier: 
+  Name: verticalRightRed
+  prefab: {fileID: 8339345611905561070, guid: 37037d1bb5e360c4882dc37ada53d363, type: 3}
+  Top:
+    CompatibleNodes: []
+  Right:
+    CompatibleNodes: []
+  Down:
+    CompatibleNodes: []
+  Left:
+    CompatibleNodes: []

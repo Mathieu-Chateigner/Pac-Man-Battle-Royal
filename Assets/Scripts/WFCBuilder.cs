@@ -41,6 +41,11 @@ public class WFCBuilder : MonoBehaviour
            int x = _toCollapse[0].x;
            int y = _toCollapse[0].y;
 
+           if (x < height / 2)
+           {
+               Debug.Log("vjdj");
+           }
+
            List<WFCNode> potentialNodes = new List<WFCNode>(Nodes);
 
            for (int i = 0; i < offsets.Length; i++)

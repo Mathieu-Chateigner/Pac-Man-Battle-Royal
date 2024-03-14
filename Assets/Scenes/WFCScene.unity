@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1d7362d1cc00044ae7f2f3da84a38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 40
-  height: 40
+  width: 200
+  height: 200
   Nodes:
   - {fileID: 11400000, guid: 3e8f720bcf820914f84c8c3b27a57a52, type: 2}
   - {fileID: 11400000, guid: 8fa0a98fbfa1be340a503d2d4f033332, type: 2}
