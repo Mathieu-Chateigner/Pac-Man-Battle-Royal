@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef0853598425eec44b67959dac297c33, type: 3}
   m_Name: cross
   m_EditorClassIdentifier: 
-  name: cross
+  Name: 
   prefab: {fileID: 2679945651506211724, guid: 85cb079fdc8b7ce43ad0e675a81cafc1, type: 3}
   Top:
     CompatibleNodes:
@@ -20,21 +20,29 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 4b3ec7203143af945bcb7cee4887d6f3, type: 2}
     - {fileID: 11400000, guid: 639491adf77b52e40bd28ed3bab7610e, type: 2}
     - {fileID: 11400000, guid: 365c1e4663251e342abf5235eb44f985, type: 2}
+    - {fileID: 11400000, guid: a383984b40b3a6b4fa7c3a6ab27ba28d, type: 2}
+    - {fileID: 11400000, guid: a2f5fac458f80274a9000eda2f93e7af, type: 2}
   Right:
     CompatibleNodes:
     - {fileID: 11400000}
     - {fileID: 11400000, guid: 3902af1991f429141852d250181847b1, type: 2}
     - {fileID: 11400000, guid: fdb85081eeb478a45b457ac8df0fa979, type: 2}
     - {fileID: 11400000, guid: 639491adf77b52e40bd28ed3bab7610e, type: 2}
+    - {fileID: 11400000, guid: b985cdcf32a49374985aef81f197cbea, type: 2}
+    - {fileID: 11400000, guid: 72bd46b130f017a47bbdf0fb6a422e0b, type: 2}
   Down:
     CompatibleNodes:
     - {fileID: 11400000}
     - {fileID: 11400000, guid: 4b3ec7203143af945bcb7cee4887d6f3, type: 2}
     - {fileID: 11400000, guid: fdb85081eeb478a45b457ac8df0fa979, type: 2}
     - {fileID: 11400000, guid: bf8bf4b8dab060d4fb14bf88f6bb3550, type: 2}
+    - {fileID: 11400000, guid: a383984b40b3a6b4fa7c3a6ab27ba28d, type: 2}
+    - {fileID: 11400000, guid: a2f5fac458f80274a9000eda2f93e7af, type: 2}
   Left:
     CompatibleNodes:
     - {fileID: 11400000}
     - {fileID: 11400000, guid: 3902af1991f429141852d250181847b1, type: 2}
     - {fileID: 11400000, guid: bf8bf4b8dab060d4fb14bf88f6bb3550, type: 2}
     - {fileID: 11400000, guid: 365c1e4663251e342abf5235eb44f985, type: 2}
+    - {fileID: 11400000, guid: b985cdcf32a49374985aef81f197cbea, type: 2}
+    - {fileID: 11400000, guid: 72bd46b130f017a47bbdf0fb6a422e0b, type: 2}
