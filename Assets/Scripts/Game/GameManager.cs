@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
     public int timerExploration;
 
+    public int timerIntro;
     public int timerBattle;
 
     private TMP_Text timerText;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public int actualValue;
 
     public List<Transform> listSpawnPoint;
+    public AudioSource introAudio;
 
     //private static GameManager instance;
 
@@ -114,6 +116,8 @@ public class GameManager : MonoBehaviourPunCallbacks
         boolExploration = true;
         
         ChangeScene("Game");
+        introAudio.Play();
+        yield return CountDown(timerIntro);
         yield return CountDown(timerBattle);
         boolBattle = true;
     }
