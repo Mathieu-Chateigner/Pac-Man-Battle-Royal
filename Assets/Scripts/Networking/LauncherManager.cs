@@ -53,6 +53,8 @@ namespace Networking
         public override void OnDisconnected(DisconnectCause cause)
         {
             Debug.LogWarning($"OnDisconnected() was called by PUN with reason {cause}.");
+            gamePanel.SetActive(true);
+            loadingPanel.SetActive(false);
         }
         
         public override void OnJoinRandomFailed(short returnCode, string message)
@@ -75,6 +77,7 @@ namespace Networking
         {
             if (PhotonNetwork.IsConnected)
             {
+                Debug.Log("JoinRandomRoom");
                 PhotonNetwork.JoinRandomRoom();
             }
             else

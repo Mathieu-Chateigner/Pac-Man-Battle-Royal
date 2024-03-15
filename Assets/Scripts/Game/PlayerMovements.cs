@@ -1,4 +1,5 @@
 using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 
 namespace Game
@@ -12,7 +13,7 @@ namespace Game
         NoDir
     }
 
-    public class PlayerMovements : MonoBehaviour
+    public class PlayerMovements : MonoBehaviourPunCallbacks
     {
         public Rigidbody2D rb;
         public LayerMask whatStopsMovement;
@@ -25,6 +26,7 @@ namespace Game
 
         private void Update()
         {
+            if (!photonView.IsMine) return;
             if (Time.time - _lastMoveTime < moveDelay || _isMoving) return;
 
             if (Input.GetKey(KeyCode.UpArrow))

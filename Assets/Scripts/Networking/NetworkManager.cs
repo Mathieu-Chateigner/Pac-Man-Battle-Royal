@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Networking
 {
-    public class GameManager : MonoBehaviourPunCallbacks
+    public class NetworkManager : MonoBehaviourPunCallbacks
     {
         #region Photon Callbacks
         
