@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         yield return CountDown(timerExploration);
         boolExploration = true;
         
-        SceneManager.LoadScene("Game");
+        ChangeScene("Game");
         yield return CountDown(timerBattle);
         boolBattle = true;
     }
@@ -131,14 +131,14 @@ public class GameManager : MonoBehaviourPunCallbacks
         
     }
     [PunRPC]
-    public void LeaveRoom()
+    public void ChangeSceneWithName(string sceneName)
     {
-        PhotonNetwork.LoadLevel("WFCScene");
+        PhotonNetwork.LoadLevel(sceneName);
     }
 
-    public void BackToMenu()
+    private void ChangeScene(string sceneName)
     {
-        photonView.RPC("LeaveRoom", RpcTarget.All);
+        photonView.RPC("ChangeSceneWithName", RpcTarget.All, sceneName);
     }
     
     

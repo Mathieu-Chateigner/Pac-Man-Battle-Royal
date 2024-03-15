@@ -52,7 +52,7 @@ namespace Networking
             if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
             {
                 Debug.Log($"CurrentRoom.PlayerCount : {PhotonNetwork.CurrentRoom.PlayerCount} - CurrentRoom.MaxPlayers : {PhotonNetwork.CurrentRoom.MaxPlayers}");
-                PhotonNetwork.LoadLevel("Game");
+                PhotonNetwork.LoadLevel("WFCScene");
             }
         }
 
