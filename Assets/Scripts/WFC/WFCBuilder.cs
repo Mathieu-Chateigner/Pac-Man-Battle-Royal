@@ -25,9 +25,15 @@ public class WFCBuilder : MonoBehaviour
 
    private GameManager gm;
 
+   private bool isGMNull;
+
    private void Awake()
    {
        gm = GameManager.Instance;
+       if (gm == null)
+       {
+           isGMNull = true;
+       }
    }
 
    private void Start()
@@ -94,6 +100,7 @@ public class WFCBuilder : MonoBehaviour
                _grid[x, y] = potentialNodes[Random.Range(0, potentialNodes.Count)];
            }
            GameObject newNode = Instantiate(_grid[x, y].prefab, new Vector2(x, y), Quaternion.identity);
+           
            AddSpawnPoint(newNode.transform);
            _toCollapse.RemoveAt(0);
        }
@@ -101,10 +108,18 @@ public class WFCBuilder : MonoBehaviour
 
    private void AddSpawnPoint(Transform transform)
    {
-       if (transform.childCount == 1)
+       if (isGMNull == true)
        {
-           gm.listSpawnPoint.Add(transform.GetChild(0));
+           Debug.Log("gm is null");
        }
+       else
+       {
+           if (transform.childCount == 1)
+           {
+               gm.listSpawnPoint.Add(transform.GetChild(0));
+           }
+       }
+       
    }
    private void WhittleNodes(List<WFCNode> potentialNodes, List<WFCNode> validNodes)
    {
